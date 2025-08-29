@@ -2,16 +2,17 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocator:
     OVERLAY = (By.XPATH, '//div[@class="Modal_modal__P3_V5"]/div[@class="Modal_modal_overlay__x2ZCr"]')
-    BUT_PERSONAL_ACCOUNT = (By.XPATH, '//a[@href="/account"]')
     TEXT_COLLECT_BURGER = (By.XPATH, '//h1[contains(text(), "Соберите бургер")]')
-    TEXT_FEED_ORDER = (By.XPATH, '//h1[contains(text(), "Лента заказов")]')
-    BUT_CONSTRUCTOR = (By.XPATH, '//a[@href="/"]/descendant::p[contains(text(), "Конструктор")]')
-    BUT_FEED_ORDER = (By.XPATH, '//a[@href="/feed"]')
+    TEXT_ORDER_LIST = (By.XPATH, '//h1[contains(text(), "Лента заказов")]')
+    BUTTON_CONSTRUCTOR = (By.XPATH, '//a[@href="/"]/descendant::p[contains(text(), "Конструктор")]')
+    BUTTON_ORDER_LIST = (By.XPATH, '//a[@href="/feed"]')
     HEAD_INGREDIENT_DETAIL = (By.XPATH, '//h2[text()="Детали ингредиента"]')
-    BUT_CROSS = (By.XPATH, '//button[@class="Modal_modal__close_modified__3V5XS Modal_modal__close__TnseK"]')
+    BUTTON_CROSS = (By.XPATH, '//button[@class="Modal_modal__close_modified__3V5XS Modal_modal__close__TnseK"]')
     BURGER_CONSTRUCTOR = (By.XPATH, '//ul[contains(@class, "BurgerConstructor_basket__list__l9dp_")]')
-    BUT_CREATE_ORDER = (By.XPATH, '//button[text()="Оформить заказ"]')
-    TEXT_ORDER_ID = (By.XPATH, '//p[text()="идентификатор заказа"]')
+    BUTTON_CREATE_ORDER = (By.XPATH, '//button[text()="Оформить заказ"]')
+    LOGIN_BUTTON = (By.XPATH, '//button[contains(text(), "Войти")]')
+    EMAIL_FIELD = (By.XPATH, '//input[@name="name"]')
+    PASSWORD_FIELD = (By.XPATH, '//input[@name="Пароль"]')
     INGREDIENT_LOCATOR = {
         "buns": [
             (By.XPATH, '//a[@href="/ingredient/61c0c5a71d1f82001bdaaa6d"]'),

@@ -7,7 +7,7 @@ from seletools.actions import drag_and_drop
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 15)
 
     @allure.step('Скролл до элемента')
     def scroll_to_element(self, locator):
@@ -61,8 +61,3 @@ class BasePage:
     @allure.step('Перетащить элемент')
     def drag_and_drop_element(self, source, target):
         drag_and_drop(self.driver, source, target)
-
-    @allure.step('Получить атрибут элемента')
-    def get_attribute_on_element(self, locator, attribute, timeout = 10):
-        element = self.wait_for_element(locator, timeout)
-        return element.get_attribute(attribute)

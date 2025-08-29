@@ -2,8 +2,8 @@ import allure
 import helpers
 from urls import Urls
 from locators.order_list_page_locators import OrderListLocator
-from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocator
+from pages.base_page import BasePage
 from selenium.webdriver.support import expected_conditions as EC
 
 
@@ -11,27 +11,27 @@ class MainPage(BasePage):
 
     @allure.step('Клик на кнопку "Конструктор"')
     def click_but_constructor(self):
-        self.wait_for_element(MainPageLocator.BUT_CONSTRUCTOR)
+        self.wait_for_element(MainPageLocator.BUTTON_CONSTRUCTOR)
         self.wait_hide_element(MainPageLocator.OVERLAY)
-        self.click_element(MainPageLocator.BUT_CONSTRUCTOR)
+        self.click_element(MainPageLocator.BUTTON_CONSTRUCTOR)
 
     @allure.step('Клик на кнопку "Лента заказов"')
     def click_but_feed_order(self):
-        self.wait_for_element(MainPageLocator.BUT_FEED_ORDER)
+        self.wait_for_element(MainPageLocator.BUTTON_ORDER_LIST)
         self.wait_hide_element(MainPageLocator.OVERLAY)
-        self.click_element(MainPageLocator.BUT_FEED_ORDER)
+        self.click_element(MainPageLocator.BUTTON_ORDER_LIST)
 
     @allure.step('Клик на крестик в карточке ингредиента')
     def click_but_cross(self):
-        self.wait_for_element(MainPageLocator.BUT_CROSS)
+        self.wait_for_element(MainPageLocator.BUTTON_CROSS)
         self.wait_hide_element(MainPageLocator.OVERLAY)
-        self.click_element(MainPageLocator.BUT_CROSS)
+        self.click_element(MainPageLocator.BUTTON_CROSS)
 
     @allure.step('Клик на кнопку "Оформить заказ"')
     def click_but_create_order(self):
-        self.wait_for_element(MainPageLocator.BUT_CREATE_ORDER)
+        self.wait_for_element(MainPageLocator.BUTTON_CREATE_ORDER)
         self.wait_hide_element(MainPageLocator.OVERLAY)
-        self.click_element(MainPageLocator.BUT_CREATE_ORDER)
+        self.click_element(MainPageLocator.BUTTON_CREATE_ORDER)
 
     @allure.step('Клик на булочку')
     def click_ingredient(self, locator):
@@ -65,7 +65,7 @@ class MainPage(BasePage):
 
     @allure.step('Подождать загрузки страницы "Лента заказов"')
     def wait_load_page_feed_order(self):
-        self.wait_for_element(MainPageLocator.TEXT_FEED_ORDER)
+        self.wait_for_element(MainPageLocator.TEXT_ORDER_LIST)
 
     @allure.step('Подождать скрытия карточки ингредиента')
     def wait_hide_card_ingredient(self):

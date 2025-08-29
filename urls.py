@@ -1,13 +1,7 @@
 class Urls:
     MAIN_PAGE = "https://stellarburgers.nomoreparties.site/"
     LOGIN_PAGE = f"{MAIN_PAGE}login" # Логин
-    REGISTER_PAGE = f"{MAIN_PAGE}register"
-    FORGOT_PASSWORD_PAGE = f"{MAIN_PAGE}forgot-password"
-    RESET_PASSWORD_PAGE = f"{MAIN_PAGE}reset-password"
-    PERSONAL_ACCOUNT = f"{MAIN_PAGE}account"
-    PERSONAL_PROFILE = f"{MAIN_PAGE}account/profile"
     FEED_PAGE =  f"{MAIN_PAGE}feed"  # Лента заказов
-    HISTORY_PAGE = f"{MAIN_PAGE}account/order-history"
     INGREDIENT_LINK = {
         "buns": [
             "/ingredient/61c0c5a71d1f82001bdaaa6d",
